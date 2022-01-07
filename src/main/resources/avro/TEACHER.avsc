@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "namespace": "com.kafkademo.schemas",
+  "name": "Teacher",
+  "doc": "schema for the teacher payload.",
+  "fields": [
+    {
+      "name": "identifiant",
+      "type": "long",
+      "doc": "Teacher identifiant"
+    },
+    {
+      "name": "first_name",
+      "type": "string",
+      "doc": "the first name of the teacher"
+    },
+    {
+      "name": "last_name",
+      "type": "string",
+      "doc": "The last name of the teacher"
+    }
+  ]
+}

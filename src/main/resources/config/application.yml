@@ -1,0 +1,32 @@
+spring:
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      bootstrap-servers: pkc-ep9mm.us-east-2.aws.confluent.cloud:9092
+      properties:
+        schema:
+          registry:
+            url: https://psrc-5mn3g.ap-southeast-2.aws.confluent.cloud
+    properties:
+      schema:
+        registry:
+          url: https://psrc-5mn3g.ap-southeast-2.aws.confluent.cloud
+      basic:
+        auth:
+          credentials:
+            source: USER_INFO
+          user:
+            info: AOCR454ZHXD4BVSS:MacezYgsFbUoP9vMGYw+yumVTqBUM/xIikNCiwbGf2owWORKUv+f3Bqdh+zsRV62
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: org.apache.kafka.common.security.plain.PlainLoginModule   required username='YMPJW74CTUCUVKS6'   password='qCBhpHPCEtW5edPi9eAxtTWtVDDRNu8/aQxM7qH4/mbfmiAe0VhzGeJppKsdHMn1';
+      security:
+        protocol: SASL_SSL
+
+logging:
+  level:
+    org:
+      apache:
+        kafka: TRACE
